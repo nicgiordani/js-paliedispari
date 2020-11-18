@@ -2,20 +2,18 @@
 // Creare una funzione per capire se la parola inserita è palindroma.
 
 var parola = prompt("inserisci una parola");
-console.log(parola.reverse);
+console.log(parola);
 
-// // mi serve una funzione che capisca se una parola è uguale all'altra letta al contrario
-//
-// function reverseString(parola) {
-//     return parola;
-// }
-// reverseString(parola);
-// console.log(parola);
+const str = parola;
+const newStr = str
+  .split ("")
+  .reverse()
+  .join("");
 
+console.log(newStr);
 
-// function reverseString(parola) {
-//   var reverse = parola.reverse;
-//   return reverse;
-// }
-// reverseString("hello");
-// console.log(parola);
+if (parola === newStr ) {
+  console.log("La parola che hai inserito è palindroma");
+} else {
+  console.log("La parola che hai inserito non è palindroma");
+}
